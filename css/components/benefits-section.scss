@@ -1,0 +1,11 @@
+.benefits-section{
+    position: relative;
+    background: url('../img/bg/about-pattern.jpg') left top 57% no-repeat;
+
+    &::before{
+        content: url('../img/bg/about-raspberries.png');
+        position: absolute;
+        bottom: -110px;
+        left: 0;
+    }
+}

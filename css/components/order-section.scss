@@ -1,0 +1,18 @@
+.order-section{
+    position: relative;
+    background: url('../img/bg/form-pattern.png');
+
+    &::before{
+        content: url('../img/bg/form-berries.png');
+        position: absolute;
+        left: 15px;
+        bottom: 50px;        
+    }
+
+    &::after{
+        content: url('../../img/bg/form-leaf.png');
+        position: absolute;
+        right: 10px;
+        bottom: 50px;
+    }
+}

@@ -1,0 +1,56 @@
+.radio{
+    display: flex;
+    cursor: pointer;
+    user-select: none;  // выключает поведение по выделению текста
+    margin-right: 30px;
+
+    &:last-child{
+        margin-right: 0;
+    }
+
+    &--checkbox{
+        .radio__visible{
+            border-radius: 0;
+
+            &::before{
+                background: url('../Maquette/icons/checkmark.svg');
+            }
+        }
+    }
+}
+
+.radio__elem{
+    display: none;
+
+    &:checked ~ .radio__visible{
+        &::before{
+            display: block;
+
+            // если radio__elem в состоянии checked то
+            // блок-потомок radio__visible 
+            // его элемент before будет виден
+        }
+    }
+}
+
+.radio__visible{
+    width: 26px;
+    height: 26px;
+    position: relative;
+    border-radius: 50%;
+    background: #fff;
+    margin-right: 7px;
+
+    &::before{
+        content: "";
+        width: 14px;
+        height: 14px;
+        background: #365A49;
+        border-radius: 50%;
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

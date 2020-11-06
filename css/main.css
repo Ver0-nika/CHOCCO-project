@@ -15,6 +15,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
+  color: #666;
 }
 
 .wrapper {
@@ -25,14 +26,10 @@ body {
   overflow: hidden;
 }
 
-.maincontent {
-  min-height: 100%;
-  position: relative;
-}
-
 .container {
   width: 940px;
   margin: 0 auto;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -72,11 +69,24 @@ img {
 }
 
 .hero {
-  background: url("../../img/bg/chocolates.png") left 78% center no-repeat, url("../../img/1scr_bg.png") right bottom no-repeat;
+  background: url("../img/1scr_bg.png") right bottom no-repeat;
   background-color: #61c4d9;
-  height: 10vh;
+  height: 100vh;
   min-height: 650px;
   color: #fff;
+  position: relative;
+}
+.hero::before {
+  position: absolute;
+  bottom: -50px;
+  left: 2%;
+  content: url("../img/bg/video-left-leaf.png");
+}
+.hero::after {
+  content: url("../img/bg/right-leaves-and-berry.png");
+  position: absolute;
+  bottom: -50px;
+  right: 0;
 }
 
 .hero__title-section {
@@ -89,19 +99,20 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 24px 0 45px 0;
+  background: url("../img/bg/chocolates.png") right center/50% auto no-repeat;
 }
 
 .hero__main-title {
   font-size: 48px;
   line-height: 1.1;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
 .hero__title-desc {
   font-size: 21px;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
   padding-right: 10%;
 }
 
@@ -145,7 +156,7 @@ img {
 }
 
 .features__item {
-  margin-right: 46px;
+  margin-right: 30px;
 }
 .features__item:last-child {
   margin-right: 0;
@@ -168,17 +179,396 @@ img {
 .btn {
   font-size: 19px;
   font-weight: bold;
-  padding: 18px 35px;
+  padding: 18px 37px;
   text-transform: uppercase;
   border-radius: 100px;
   line-height: 1;
   text-decoration: none;
+  display: inline-block;
+  border: none;
 }
 .btn--theme--white {
   background: #fff;
   color: #0b4d3c;
 }
 .btn--theme--white:hover {
-  color: #fff;
   background: #0b4d3c;
+  color: #fff;
+}
+.btn--theme--green {
+  background: #0b4d3c;
+  color: #fff;
+}
+.btn--theme--green:hover {
+  background: #fff;
+  color: #0b4d3c;
+}
+.btn--theme--transparent {
+  background: transparent;
+  color: #000;
+  text-transform: none;
+}
+.btn--theme--transparent:hover {
+  color: #0b4d3c;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section--font-color--green {
+  color: #0b4d3c;
+}
+.section--font-color--green .section__title {
+  color: inherit;
+}
+
+.section__title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.headline {
+  text-align: center;
+  margin-bottom: 49px;
+}
+
+.headline__title {
+  margin-bottom: 0;
+}
+
+.headline__subtitle {
+  padding: 0 26%;
+}
+
+.benefits {
+  display: flex;
+}
+
+.benefits__item {
+  flex: 1;
+  padding: 0 3%;
+  position: relative;
+}
+.benefits__item::before {
+  content: url(../img/bg/gray-circles.png);
+  position: absolute;
+  top: 50px;
+  right: 0;
+  transform: translateX(50%);
+}
+.benefits__item:first-child {
+  padding-left: 0;
+}
+.benefits__item:last-child {
+  padding-right: 0;
+}
+.benefits__item:last-child::before {
+  display: none;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit__image {
+  margin-bottom: 10px;
+}
+
+.benefit__image-wrapper {
+  display: inline-block;
+  width: 126px;
+  height: 126px;
+  position: relative;
+  background: #F2F5F4;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.benefit__icon {
+  width: 75px;
+  height: 69px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.benefit__title {
+  color: #292929;
+  font-weight: bold;
+  font-size: 27px;
+}
+
+.benefits-section {
+  position: relative;
+  background: url("../img/bg/about-pattern.jpg") left top 57% no-repeat;
+}
+.benefits-section::before {
+  content: url("../img/bg/about-raspberries.png");
+  position: absolute;
+  bottom: -110px;
+  left: 0;
+}
+
+.reviews-section {
+  position: relative;
+  background: url("../img/bg/reviews-strawberries.png") right top no-repeat;
+}
+.reviews-section::after {
+  content: url("../img/bg/reviews-left-berries.png");
+  position: absolute;
+  left: 0;
+  bottom: -150px;
+}
+
+.reviews {
+  position: relative;
+}
+
+.reviews__display {
+  background: #F8FAF9;
+  padding: 50px 45px 34px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.reviews__display::before {
+  content: url("../img/bg/reviews-pattern.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.reviews__display::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -65px;
+}
+
+.reviews__display-inner {
+  display: flex;
+}
+
+.reviews__avatar {
+  width: 254px;
+  height: 260px;
+}
+
+.reviews__avatar-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__content {
+  flex: 1;
+  margin-left: 20px;
+  padding-right: 10%;
+}
+
+.reviews__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 22px;
+  color: #292929;
+}
+
+.reviews__text {
+  margin-bottom: 36px;
+}
+
+.reviews__author {
+  font-size: 18px;
+  color: #292929;
+}
+
+.reviews__switcher {
+  display: flex;
+  justify-content: center;
+}
+
+.interactive-avatar {
+  width: 80px;
+  height: 80px;
+  border: 6px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.interactive-avatar--active {
+  border-color: #365A49;
+}
+
+.interactive-avatar__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+.interactive-avatar__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.order-section {
+  position: relative;
+  background: url("../img/bg/form-pattern.png");
+}
+.order-section::before {
+  content: url("../img/bg/form-berries.png");
+  position: absolute;
+  left: 15px;
+  bottom: 50px;
+}
+.order-section::after {
+  content: url("../../img/bg/form-leaf.png");
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
+}
+
+.form {
+  display: flex;
+}
+
+.form__col {
+  flex: 1;
+  margin-right: 20px;
+}
+.form__col:last-child {
+  margin-right: 0;
+}
+
+.form__row {
+  display: flex;
+  margin-bottom: 18px;
+}
+
+.form__block {
+  flex: 1;
+  margin-right: 20px;
+}
+.form__block:last-child {
+  margin-right: 0;
+}
+
+.form__input {
+  width: 100%;
+  padding: 18px 11px;
+  border: solid 3px transparent;
+}
+.form__input--textarea {
+  height: 180px;
+  resize: none;
+}
+.form__input:focus {
+  border-color: #DEE2BD;
+  outline: none;
+}
+
+.form__controls {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.form__controls--margin-bottom {
+  margin-bottom: 54px;
+}
+
+.radio {
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+  margin-right: 30px;
+}
+.radio:last-child {
+  margin-right: 0;
+}
+.radio--checkbox .radio__visible {
+  border-radius: 0;
+}
+.radio--checkbox .radio__visible::before {
+  background: url("../Maquette/icons/checkmark.svg");
+}
+
+.radio__elem {
+  display: none;
+}
+.radio__elem:checked ~ .radio__visible::before {
+  display: block;
+}
+
+.radio__visible {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 7px;
+}
+.radio__visible::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #365A49;
+  border-radius: 50%;
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed-menu {
+  position: fixed;
+  top: 35%;
+  right: 3%;
+  z-index: 100;
+}
+
+.fixed-menu__item {
+  margin-bottom: 5px;
+}
+.fixed-menu__item--active .fixed-menu__link {
+  border-color: #fff;
+}
+
+.fixed-menu__link {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: block;
+  position: relative;
+}
+.fixed-menu__link::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

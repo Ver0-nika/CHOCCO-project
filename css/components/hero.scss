@@ -1,11 +1,24 @@
 .hero{
-    background: 
-    url('../../img/bg/chocolates.png') left 78% center no-repeat, 
-    url('../../img/1scr_bg.png') right bottom no-repeat;
+    background: url('../img/1scr_bg.png') right bottom no-repeat;
     background-color: $blue;
-    height: 10vh;
+    height: 100vh;
     min-height: 650px;
     color: #fff;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        bottom: -50px;
+        left: 2%;
+        content: url('../img/bg/video-left-leaf.png');
+    }
+
+    &::after{
+        content: url('../img/bg/right-leaves-and-berry.png');
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+    }
 }
 
 .hero__title-section{
@@ -18,18 +31,19 @@
     justify-content: space-between;
     height: 100%;
     padding: 24px 0 45px 0;
+    background: url('../img/bg/chocolates.png') right center / 50% auto no-repeat; // 50% по ширине и auto по высоте
 }
 
 .hero__main-title{
     font-size: 48px;
     line-height: 1.1;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-transform: uppercase;
 }
 
 .hero__title-desc{
     font-size: 21px;
-    margin-bottom: 28px;
+    margin-bottom: 40px;
     padding-right: 10%;
 }
