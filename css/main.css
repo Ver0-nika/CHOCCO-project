@@ -327,6 +327,7 @@ img {
   position: absolute;
   left: 0;
   bottom: -150px;
+  z-index: 10;
 }
 
 .reviews {
