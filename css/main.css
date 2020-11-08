@@ -431,7 +431,7 @@ img {
 
 .order-section {
   position: relative;
-  background: url("../img/bg/form-pattern.png");
+  background: url("../img/bg/form-pattern.png") center center/cover no-repeat;
 }
 .order-section::before {
   content: url("../img/bg/form-berries.png");
