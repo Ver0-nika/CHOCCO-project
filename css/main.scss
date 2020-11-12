@@ -1,6 +1,11 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 $blue: #61c4d9;
 $darkGreen: #0b4d3c;
@@ -9,6 +14,7 @@ $darkGreen: #0b4d3c;
 $z-reviews-decoration: 10;
 $z-fixed-menu: 100;
 
+@import "media";
 
 // normalize
 @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
@@ -34,3 +40,5 @@ $z-fixed-menu: 100;
 @import "components/form";
 @import "components/radio";
 @import "components/fixed-menu";
+@import "components/hamburger";
+@import "components/footer";

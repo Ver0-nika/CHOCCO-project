@@ -5,7 +5,19 @@
     &::before{
         content: url('../img/bg/about-raspberries.png');
         position: absolute;
-        bottom: -110px;
+        bottom: rem(-110px);
         left: 0;
+
+        @include phones {
+            display: none;
+        }
+    }
+
+    @include tablets{
+        background-position: left top 10%;
+    }
+
+    @include phones{
+        background: none;
     }
 }

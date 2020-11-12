@@ -2,13 +2,23 @@
     background: url('../img/1scr_bg.png') right bottom no-repeat;
     background-color: $blue;
     height: 100vh;
-    min-height: 650px;
+    min-height: rem(650px);
     color: #fff;
     position: relative;
 
+    @include tablets{
+        background-position: right bottom 159%;
+    }
+
+    &::before, &::after{
+        @include tablets{
+            display: none;
+        }
+    }
+
     &::before{
         position: absolute;
-        bottom: -50px;
+        bottom: rem(-50px);
         left: 2%;
         content: url('../img/bg/video-left-leaf.png');
     }
@@ -16,13 +26,33 @@
     &::after{
         content: url('../img/bg/right-leaves-and-berry.png');
         position: absolute;
-        bottom: -50px;
+        bottom: rem(-50px);
         right: 0;
     }
 }
 
 .hero__title-section{
     width: 46%;
+
+    @include tablets{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &::before{
+            content: "";
+            width: rem(316px);
+            height: rem(330px);
+            background: 
+            url('../img/bg/promo-berries-768.png') center bottom 0% / contain no-repeat, 
+            url('../img/bg/chocolates.png') center center / contain no-repeat;
+            margin-bottom: rem(16px);
+        }
+    }
 }
 
 .hero__container{
@@ -30,20 +60,38 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 24px 0 45px 0;
+    padding: rem(24px) 0 rem(45px) 0;
     background: url('../img/bg/chocolates.png') right center / 50% auto no-repeat; // 50% по ширине и auto по высоте
+
+    @include tablets{
+        background: none;
+    }
 }
 
 .hero__main-title{
-    font-size: 48px;
+    font-size: rem(48px);
     line-height: 1.1;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
     text-transform: uppercase;
 }
 
 .hero__title-desc{
-    font-size: 21px;
-    margin-bottom: 40px;
+    font-size: rem(21px);
+    margin-bottom: rem(40px);
     padding-right: 10%;
+
+    @include tablets{
+        padding: 0 15%;
+    }
+
+    @include phones{
+        padding: 0 5%;
+    }
+}
+
+.hero__icons-section{
+    @include tablets{
+        display: none;
+    }
 }
